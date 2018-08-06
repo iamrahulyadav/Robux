@@ -35,7 +35,16 @@
              android:textAllCaps="false"
              android:textColor="@android:color/white" />
  -->
-        <TextView
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/ibtnRobux"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_button_robux"/>
+        <!--<TextView
             android:id="@+id/tvRobux"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,6 +56,6 @@
             android:textSize="23sp"
             android:textAllCaps="false"
             android:textStyle="bold|italic"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white" />-->
     </RelativeLayout>
 </RelativeLayout>
