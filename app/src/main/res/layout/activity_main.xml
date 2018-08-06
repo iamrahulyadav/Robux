@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    tools:context=".activities.MainActivity">
+
+    <com.adefruandta.spinningwheel.SpinningWheelView
+        android:id="@+id/wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dp"
+        app:wheel_arrow_color="@android:color/white"
+        app:wheel_colors="@array/rainbow_dash"
+        app:wheel_items="@array/dummy"
+        app:wheel_stroke_color="@android:color/white"
+        app:wheel_stroke_width="5dp"
+        app:wheel_text_size="32sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlSpinArea"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_spin_circle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="SPIN"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>

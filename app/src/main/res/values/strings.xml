@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Robux</string>
+
+    <string-array name="robux">
+        <item> </item>
+        <item>R$</item>
+        <item> </item>
+        <item>R$</item>
+        <item> </item>
+        <item>R$</item>
+    </string-array>
+</resources>
