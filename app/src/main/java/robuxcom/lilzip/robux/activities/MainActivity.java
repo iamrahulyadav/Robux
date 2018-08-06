@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,9 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.adefruandta.spinningwheel.SpinningWheelView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 
 import java.io.IOException;
 import java.util.Random;
@@ -21,11 +25,15 @@ import robuxcom.lilzip.robux.R;
 public class MainActivity extends Activity {
     private SpinningWheelView wheelView;
     private RelativeLayout rotate;
+    private static final String ADMOB_APP_ID = "ca-app-pub-6610497664170714~8078830415";
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MobileAds.initialize(this, ADMOB_APP_ID);
+        //loadAdsReq();
         wheelView = findViewById(R.id.wheel);
         rotate = findViewById(R.id.rlSpinArea);
 
@@ -47,7 +55,8 @@ public class MainActivity extends Activity {
                 if (item.equalsIgnoreCase("R$")) {
                     //Toast.makeText(MainActivity.this, item, Toast.LENGTH_SHORT).show();
                     startSound();
-                    startActivity(new Intent(MainActivity.this, RobuxActivity.class));
+                } else {
+                    showAds();
                 }
             }
         });
@@ -66,6 +75,26 @@ public class MainActivity extends Activity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        loadAdsReq();
+    }
+
+    private void loadAdsReq() {
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-6610497664170714/2443360358");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+    }
+
+    private void showAds() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
+    }
+
     int generateRandomInt(int maximum, int minimum) {
         Random rn = new Random();
         int range = maximum - minimum + 1;
@@ -79,6 +108,12 @@ public class MainActivity extends Activity {
             player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
             player.prepare();
             player.start();
+            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    startActivity(new Intent(MainActivity.this, RobuxActivity.class));
+                }
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
