@@ -1,4 +1,4 @@
-package robuxcom.lilzip.robux.activities;
+package com.robuxfreeforfreetixfreeappspinwheel.activities;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -12,12 +12,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import robuxcom.lilzip.robux.R;
+import com.robuxfreeforfreetixfreeappspinwheel.R;
+
 
 public class RobuxActivity extends Activity {
-
+//    com.Robuxfreeforfreetixfreeappspinwheel
     private ImageButton ibtnRobux;
-    private static final String ROBUX_URL = "http://bit.ly/2vlTlGO";
+    private static final String ROBUX_URL = "http://bit.ly/2vt4YMt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

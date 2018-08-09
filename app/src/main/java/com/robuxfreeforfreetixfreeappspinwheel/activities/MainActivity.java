@@ -1,4 +1,4 @@
-package robuxcom.lilzip.robux.activities;
+package com.robuxfreeforfreetixfreeappspinwheel.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,11 +16,11 @@ import com.adefruandta.spinningwheel.SpinningWheelView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.robuxfreeforfreetixfreeappspinwheel.R;
 
 import java.io.IOException;
 import java.util.Random;
 
-import robuxcom.lilzip.robux.R;
 
 public class MainActivity extends Activity {
     private SpinningWheelView wheelView;

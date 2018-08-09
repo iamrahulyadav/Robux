@@ -1,4 +1,4 @@
-package robuxcom.lilzip.robux.activities;
+package com.robuxfreeforfreetixfreeappspinwheel.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import robuxcom.lilzip.robux.R;
+import com.robuxfreeforfreetixfreeappspinwheel.R;
+import com.robuxfreeforfreetixfreeappspinwheel.activities.MainActivity;
+
 
 public class SplashActivity extends Activity {
 
