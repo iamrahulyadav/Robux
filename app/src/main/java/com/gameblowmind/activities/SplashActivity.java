@@ -1,15 +1,13 @@
-package com.robuxfreeforfreetixfreeappspinwheel.activities;
+package com.gameblowmind.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.robuxfreeforfreetixfreeappspinwheel.R;
-import com.robuxfreeforfreetixfreeappspinwheel.activities.MainActivity;
+import com.gameblowmind.R;
 
 
 public class SplashActivity extends Activity {

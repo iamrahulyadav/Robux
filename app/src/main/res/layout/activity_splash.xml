@@ -4,14 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_splash_bg"
+    android:background="@color/colorPrimaryDark"
     tools:context=".activities.SplashActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Spin and win points. you can withdraw your point when it reached at minimum 5000pts. Per 1000pts = 10tk. Only bkash is available for withdraw"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:theme="@style/RedAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:progressDrawable="@drawable/circular_progress_bar" />
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:theme="@style/RedAccent" />
 </RelativeLayout>

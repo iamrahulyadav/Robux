@@ -1,4 +1,4 @@
-package com.robuxfreeforfreetixfreeappspinwheel;
+package com.gameblowmind;
 
 import org.junit.Test;
 

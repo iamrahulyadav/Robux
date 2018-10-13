@@ -1,18 +1,15 @@
-package com.robuxfreeforfreetixfreeappspinwheel.activities;
+package com.gameblowmind.activities;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.robuxfreeforfreetixfreeappspinwheel.R;
+import com.gameblowmind.R;
 
 
 public class RobuxActivity extends Activity {

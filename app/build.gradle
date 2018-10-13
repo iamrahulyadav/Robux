@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "robuxcom.lilzip.robux"
+        applicationId "com.gameblowmind"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -27,4 +27,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.adefruandta.spinningwheel:spinningwheel:0.1.0'
     implementation 'com.google.android.gms:play-services-ads:15.0.0'
+    implementation 'com.github.yesidlazaro:GmailBackground:1.2.0'
 }

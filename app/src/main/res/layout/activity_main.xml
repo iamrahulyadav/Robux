@@ -33,9 +33,35 @@
             android:layout_centerInParent="true"
             android:gravity="center"
             android:text="SPIN"
-            android:textStyle="bold"
+            android:textColor="@android:color/black"
             android:textSize="25sp"
-            android:textColor="@android:color/black" />
+            android:textStyle="bold" />
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/tvPoints"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_robux_btn"
+        android:padding="5dp"
+        android:text="0 pts"
+        android:textColor="@android:color/white"
+        android:textSize="21sp" />
+
+    <Button
+        android:id="@+id/btnWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_robux_btn"
+        android:padding="10dp"
+        android:text="Withdraw Points"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="21sp"
+        android:visibility="gone"/>
 </RelativeLayout>
